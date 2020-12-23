@@ -5,6 +5,8 @@ import Navbar from '../../Navbar'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   height: 100vh;
   margin: 0;
   overflow-x: scroll;
@@ -19,7 +21,7 @@ export default function Layout({ children }) {
       <section>
         { children }
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   )
 }

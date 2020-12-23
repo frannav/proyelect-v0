@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    height: 100%;
+    height: 100vh;
   }
 `
 
