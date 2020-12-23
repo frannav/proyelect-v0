@@ -14,7 +14,7 @@ export default function Home() {
         <BackgroundImgSection />
       </Section>
       <Section>
-        <CardsSection />
+        <CardsSection/>
       </Section>
       <Section>
         <InfoSection />

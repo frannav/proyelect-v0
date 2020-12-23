@@ -48,7 +48,7 @@ const TextContainer = styled.div`
 export default function InfoSection() {
   return (
     <>
-      <InfoContainer>
+      <InfoContainer id='who'>
         <ImgContainer img={'./5.jpg'}>
           
         </ImgContainer>

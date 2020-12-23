@@ -12,6 +12,9 @@ const ServicesContainer = styled.div`
 
 const Text = styled.h2`
   font-size: 4rem;
+  text-align: center;
+  letter-spacing: -2px;
+  word-spacing: 7px;
 `
 
 const ArticleCollection = styled.div`
@@ -22,13 +25,13 @@ const ArticleCollection = styled.div`
   justify-content: space-around;
   flex-grow: 1;
   padding: 0.5rem;
-  column-gap: 1rem;  
+  column-gap: 1.5rem;  
 `
 
 const Card = styled.article`
   display: grid;
-  grid-template-columns: 350px;
-  grid-template-rows: 130px 210px 80px;
+  grid-template-columns: 380px;
+  grid-template-rows: 200px 170px 80px;
   grid-template-areas: "image" "text" "stats";
   border-radius: 8px;
   background: white;
@@ -37,7 +40,7 @@ const Card = styled.article`
   text-align: center;
   transition: 0.5s ease;
   /* cursor: pointer; */
-  margin:30px;
+  margin:45px;
 
   /* & :hover{
     transform: scale(1.15);
@@ -65,6 +68,9 @@ const CardText = styled.div`
   h2{
     margin-top:0px;
     font-size:28px;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 7px;
   }
 `
 
@@ -101,7 +107,7 @@ export default function CardsSection() {
   return (
     <>
       <ServicesContainer>
-        <Text>Servicios</Text>
+        <Text id='services'>Servicios</Text>
         <div>
           <ArticleCollection>
             {
@@ -112,10 +118,10 @@ export default function CardsSection() {
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
                 </CardText>
-                <CardStats>
+                {/* <CardStats>
                   <CardValue>+500</CardValue>
                   <CardType>Instalaciones</CardType>
-                </CardStats>
+                </CardStats> */}
               </Card>
               )
             }

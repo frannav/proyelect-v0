@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const Nav = styled.nav`
@@ -8,16 +9,24 @@ const Nav = styled.nav`
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  @media (max-width: 630px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 `
 
-const Nav_title = styled.h1`
+const Nav_title = styled.h2`
   color: ${({theme}) => theme.colors.white};
+  letter-spacing: 5px;
+  font-size: 30px;
+
 `
 
 const Nav_links = styled.div`
   display: flex;
   text-align: center;
+  margin: 8px;
 `
 
 const Nav_link = styled.a`
@@ -27,12 +36,18 @@ const Nav_link = styled.a`
   color: ${({theme}) => theme.colors.white};
 `
 
+const NavContainer = styled.div`
+  margin: 2rem;
+`
+
 const Nav_button = styled.a`
   color: ${({theme}) => theme.colors.black};
   text-decoration: none;
   margin-right: 2rem;
-  padding: .5rem;
+  padding: 1rem;
   border-radius: 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
   background-color: ${({theme}) => theme.colors.white};
 `
 
@@ -44,12 +59,14 @@ export default function Navbar() {
             <Nav_title>Proyelect</Nav_title>
           </div>
           <Nav_links>
-            <Nav_link href="#">Servicios</Nav_link>
-            <Nav_link href="#">Quienes somos</Nav_link>
+            <Link href='#services' passHref >
+              <Nav_link href="#services">Servicios</Nav_link>
+            </Link>
+            <Nav_link href='#who'>Quienes somos</Nav_link>
           </Nav_links>
-          <div>
-            <Nav_button href="#">Pide tu presupuesto</Nav_button>
-          </div>
+          <NavContainer>
+            <Nav_button href='#'>Pide tu presupuesto</Nav_button>
+          </NavContainer>
         </Nav>
       </section>
   )
